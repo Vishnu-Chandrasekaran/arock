@@ -1,0 +1,485 @@
+@import "tailwindcss" source(none);
+@source "../src";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+/*
+ * Unified design system for Arockyaa Charitable Trust.
+ *
+ * :root            -> parent trust (Arockyaa Charitable Trust) branding
+ * .theme-act       -> ACT India branding (scoped to /act-india)
+ * .theme-lira      -> LIRA branding (scoped to /lira)
+ *
+ * Every section keeps its original palette and typography by overriding the
+ * same semantic token names inside its own scope class.
+ */
+
+@theme inline {
+  --font-sans: var(--fam-sans);
+  --font-serif: var(--fam-serif);
+  --font-display: var(--fam-display);
+  --font-body: var(--fam-body);
+
+  --color-brand: var(--brand);
+  --color-brand-deep: var(--brand-deep);
+  --color-brand-soft: var(--brand-soft);
+
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --radius-2xl: calc(var(--radius) + 8px);
+  --radius-3xl: calc(var(--radius) + 12px);
+  --radius-4xl: calc(var(--radius) + 16px);
+
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary-glow: var(--primary-glow);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-accent-glow: var(--accent-glow);
+  --color-highlight: var(--highlight);
+  --color-highlight-foreground: var(--highlight-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-ring-offset-background: var(--background);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+
+  /* LIRA signature tokens */
+  --color-lira-earth: var(--lira-earth);
+  --color-lira-leaf: var(--lira-leaf);
+  --color-lira-gold: var(--lira-gold);
+  --color-lira-cream: var(--lira-cream);
+  --color-lira-dark: var(--lira-dark);
+
+  --animate-fade-up: fade-up 0.7s cubic-bezier(0.4, 0, 0.2, 1) both;
+  --animate-fade-in: fade-in 0.6s ease-out both;
+  --animate-scale-in: scale-in 0.5s cubic-bezier(0.4, 0, 0.2, 1) both;
+}
+
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes scale-in {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* ---------------- Parent: Arockyaa Charitable Trust ---------------- */
+:root {
+  --radius: 0.625rem;
+  --fam-sans: "DM Sans", ui-sans-serif, system-ui, sans-serif;
+  --fam-serif: "Playfair Display", ui-serif, Georgia, serif;
+  --fam-display: "Playfair Display", ui-serif, Georgia, serif;
+  --fam-body: "DM Sans", ui-sans-serif, system-ui, sans-serif;
+
+  --background: oklch(1 0 0);
+  --foreground: oklch(0.16 0.01 20);
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.16 0.01 20);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.16 0.01 20);
+  --primary: oklch(0.472 0.184 19.5);
+  --primary-foreground: oklch(0.99 0.005 20);
+  --primary-glow: oklch(0.58 0.19 19.5);
+  --brand: oklch(0.472 0.184 19.5);
+  --brand-deep: oklch(0.322 0.096 21);
+  --brand-soft: oklch(0.965 0.017 19);
+  --secondary: oklch(0.968 0.007 247.896);
+  --secondary-foreground: oklch(0.208 0.042 265.755);
+  --muted: oklch(0.968 0.007 247.896);
+  --muted-foreground: oklch(0.52 0.015 25);
+  --accent: oklch(0.968 0.007 247.896);
+  --accent-foreground: oklch(0.208 0.042 265.755);
+  --accent-glow: oklch(0.58 0.19 19.5);
+  --highlight: oklch(0.472 0.184 19.5);
+  --highlight-foreground: oklch(0.99 0.005 20);
+  --destructive: oklch(0.577 0.245 27.325);
+  --destructive-foreground: oklch(0.984 0.003 247.858);
+  --border: oklch(0.918 0.008 25);
+  --input: oklch(0.918 0.008 25);
+  --ring: oklch(0.472 0.184 19.5);
+  --chart-1: oklch(0.646 0.222 41.116);
+  --chart-2: oklch(0.6 0.118 184.704);
+  --chart-3: oklch(0.398 0.07 227.392);
+  --chart-4: oklch(0.828 0.189 84.429);
+  --chart-5: oklch(0.769 0.188 70.08);
+  --sidebar: oklch(0.984 0.003 247.858);
+  --sidebar-foreground: oklch(0.129 0.042 264.695);
+  --sidebar-primary: oklch(0.208 0.042 265.755);
+  --sidebar-primary-foreground: oklch(0.984 0.003 247.858);
+  --sidebar-accent: oklch(0.968 0.007 247.896);
+  --sidebar-accent-foreground: oklch(0.208 0.042 265.755);
+  --sidebar-border: oklch(0.929 0.013 255.508);
+  --sidebar-ring: oklch(0.704 0.04 256.788);
+
+  --gradient-hero: linear-gradient(180deg, oklch(0.16 0.01 20 / 0.55) 0%, oklch(0.16 0.01 20 / 0.15) 60%, transparent 100%);
+  --gradient-accent: linear-gradient(135deg, var(--brand) 0%, var(--primary-glow) 100%);
+  --gradient-soft: linear-gradient(180deg, oklch(1 0 0) 0%, oklch(0.97 0.005 25) 100%);
+  --gradient-section: var(--gradient-soft);
+  --gradient-gold: var(--gradient-accent);
+  --gradient-crimson: var(--gradient-accent);
+
+  --shadow-warm: 0 24px 60px -28px oklch(0.16 0.01 20 / 0.28);
+  --shadow-glow: 0 12px 40px -12px oklch(0.472 0.184 19.5 / 0.3);
+  --shadow-card: 0 6px 24px -12px oklch(0.16 0.01 20 / 0.16);
+  --shadow-elegant: 0 20px 50px -24px oklch(0.16 0.01 20 / 0.35);
+  --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ---------------- ACT India ---------------- */
+.theme-act {
+  --radius: 0.5rem;
+  --fam-sans: "Public Sans", system-ui, sans-serif;
+  --fam-body: "Public Sans", system-ui, sans-serif;
+  --fam-display: "Source Serif 4", Georgia, serif;
+  --fam-serif: "Source Serif 4", Georgia, serif;
+
+  --background: hsl(0 0% 100%);
+  --foreground: hsl(30 8% 10%);
+  --card: hsl(0 0% 100%);
+  --card-foreground: hsl(30 8% 10%);
+  --popover: hsl(0 0% 100%);
+  --popover-foreground: hsl(30 8% 10%);
+  --primary: hsl(350 73% 44%);
+  --primary-foreground: hsl(0 0% 100%);
+  --primary-glow: hsl(350 78% 56%);
+  --primary-deep: hsl(350 76% 30%);
+  --secondary: hsl(30 8% 96%);
+  --secondary-foreground: hsl(30 8% 14%);
+  --muted: hsl(30 8% 96%);
+  --muted-foreground: hsl(30 6% 32%);
+  --accent: hsl(350 73% 44%);
+  --accent-foreground: hsl(0 0% 100%);
+  --accent-glow: hsl(350 78% 56%);
+  --highlight: hsl(350 73% 44%);
+  --highlight-foreground: hsl(0 0% 100%);
+  --destructive: hsl(6 70% 42%);
+  --destructive-foreground: hsl(0 0% 100%);
+  --border: hsl(30 6% 88%);
+  --input: hsl(30 6% 84%);
+  --ring: hsl(350 73% 44%);
+
+  --gradient-hero: linear-gradient(180deg, hsl(30 8% 6% / 0.3) 0%, hsl(30 8% 6% / 0.45) 55%, hsl(30 8% 6% / 0.82) 100%);
+  --gradient-accent: linear-gradient(135deg, hsl(350 73% 44%) 0%, hsl(350 78% 56%) 100%);
+  --gradient-soft: linear-gradient(180deg, hsl(0 0% 100%) 0%, hsl(30 8% 96%) 100%);
+
+  --shadow-sm: 0 1px 3px hsl(30 8% 10% / 0.12);
+  --shadow-md: 0 4px 8px hsl(30 8% 10% / 0.12);
+  --shadow-lg: 0 12px 16px -6px hsl(30 8% 10% / 0.18);
+  --shadow-warm: 0 12px 16px -6px hsl(30 8% 10% / 0.18);
+  --shadow-glow: 0 8px 20px -6px hsl(350 73% 44% / 0.38);
+  --shadow-card: 0 1px 3px hsl(30 8% 10% / 0.12);
+  --transition-smooth: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: var(--fam-body);
+}
+
+.theme-act :is(h1, h2, h3, h4) {
+  font-family: var(--fam-display);
+  letter-spacing: -0.015em;
+}
+
+/* ---------------- LIRA ---------------- */
+.theme-lira {
+  --radius: 0.75rem;
+  --fam-sans: "Inter", system-ui, sans-serif;
+  --fam-body: "Inter", system-ui, sans-serif;
+  --fam-display: "Merriweather", Georgia, serif;
+  --fam-serif: "Merriweather", Georgia, serif;
+
+  --background: hsl(210 17% 98%);
+  --foreground: hsl(215 28% 17%);
+  --card: hsl(0 0% 100%);
+  --card-foreground: hsl(215 28% 17%);
+  --popover: hsl(0 0% 100%);
+  --popover-foreground: hsl(215 28% 17%);
+  --primary: hsl(216 60% 26%);
+  --primary-foreground: hsl(210 17% 98%);
+  --primary-glow: hsl(216 50% 32%);
+  --secondary: hsl(216 40% 94%);
+  --secondary-foreground: hsl(216 60% 26%);
+  --muted: hsl(220 14% 96%);
+  --muted-foreground: hsl(220 9% 46%);
+  --accent: hsl(182 80% 26%);
+  --accent-foreground: hsl(0 0% 100%);
+  --accent-glow: hsl(182 70% 32%);
+  --highlight: hsl(30 52% 64%);
+  --highlight-foreground: hsl(215 28% 17%);
+  --destructive: hsl(0 84% 60%);
+  --destructive-foreground: hsl(0 0% 100%);
+  --border: hsl(220 13% 91%);
+  --input: hsl(220 13% 91%);
+  --ring: hsl(182 80% 26%);
+
+  --lira-earth: hsl(216 60% 26%);
+  --lira-leaf: hsl(182 80% 26%);
+  --lira-gold: hsl(30 52% 64%);
+  --lira-cream: hsl(210 17% 98%);
+  --lira-dark: hsl(216 62% 16%);
+  --lira-gray-mid: hsl(220 9% 65%);
+
+  --gradient-hero: linear-gradient(100deg, hsl(216 62% 14% / 0.92) 0%, hsl(216 60% 20% / 0.78) 45%, hsl(216 60% 26% / 0.35) 100%);
+  --gradient-section: linear-gradient(180deg, hsl(210 17% 98%) 0%, hsl(220 14% 96%) 100%);
+  --gradient-gold: linear-gradient(135deg, hsl(30 52% 64%) 0%, hsl(30 45% 54%) 100%);
+  --gradient-crimson: linear-gradient(135deg, hsl(182 80% 26%) 0%, hsl(182 70% 20%) 100%);
+  --gradient-soft: var(--gradient-section);
+  --gradient-accent: var(--gradient-crimson);
+
+  --shadow-subtle: 0 1px 3px hsl(216 60% 26% / 0.12);
+  --shadow-sm: 0 4px 8px hsl(216 60% 26% / 0.1);
+  --shadow-md: 0 8px 16px hsl(216 60% 26% / 0.14);
+  --shadow-lg: 0 12px 24px hsl(216 60% 26% / 0.18);
+  --shadow-xl: 0 20px 40px hsl(216 60% 26% / 0.22);
+  --shadow-inset: inset 0 2px 4px hsl(0 0% 0% / 0.05);
+  --shadow-elegant: var(--shadow-lg);
+  --shadow-warm: var(--shadow-elegant);
+  --shadow-card: 0 6px 24px -12px hsl(216 60% 26% / 0.16);
+  --shadow-glow: 0 12px 40px -12px hsl(182 80% 26% / 0.3);
+  --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: var(--fam-body);
+  -webkit-font-smoothing: antialiased;
+}
+
+.theme-lira :is(h1, h2, h3, h4, h5, h6) {
+  font-family: var(--fam-display);
+  letter-spacing: -0.015em;
+}
+
+
+/* Cross-site trust bar: reserve space and push each section's fixed header down */
+.theme-act,
+.theme-lira {
+  --trustbar-h: 2.25rem;
+  padding-top: var(--trustbar-h);
+}
+
+.theme-act :is(header, nav).fixed.top-0,
+.theme-lira :is(header, nav).fixed.top-0 {
+  top: var(--trustbar-h);
+}
+
+.theme-act section[id],
+.theme-lira section[id] {
+  scroll-margin-top: 7.75rem;
+}
+
+@layer base {
+  * {
+    border-color: var(--color-border);
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    font-family: var(--fam-body);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1,
+  h2,
+  h3 {
+    font-family: var(--fam-serif);
+  }
+
+  /* Anchor navigation clears the fixed headers */
+  section[id] {
+    scroll-margin-top: 5.5rem;
+  }
+
+  p {
+    text-wrap: pretty;
+  }
+
+  :where(a, button, [role="button"], input, select, textarea, summary):focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 3px;
+    border-radius: 2px;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+}
+
+/* Tailwind v3 `container` compatibility (centered + gutters) */
+@utility container {
+  width: 100%;
+  margin-inline: auto;
+  padding-inline: 1.25rem;
+  max-width: 1280px;
+}
+
+/* Shared section utilities migrated from the source sites */
+@utility shell {
+  width: 100%;
+  max-width: 78rem;
+  margin-inline: auto;
+  padding-inline: 1.25rem;
+  @media (min-width: 768px) {
+    padding-inline: 2.5rem;
+  }
+  @media (min-width: 1280px) {
+    padding-inline: 3.5rem;
+  }
+}
+
+@utility eyebrow {
+  font-size: 0.75rem;
+  line-height: 1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.22em;
+}
+
+@utility bg-gradient-hero {
+  background: var(--gradient-hero);
+}
+
+@utility bg-gradient-accent {
+  background: var(--gradient-accent);
+}
+
+@utility bg-gradient-soft {
+  background: var(--gradient-soft);
+}
+
+@utility bg-gradient-section {
+  background: var(--gradient-section);
+}
+
+@utility bg-gradient-gold {
+  background: var(--gradient-gold);
+}
+
+@utility bg-gradient-crimson {
+  background: var(--gradient-crimson);
+}
+
+@utility shadow-warm {
+  box-shadow: var(--shadow-warm);
+}
+
+@utility shadow-glow {
+  box-shadow: var(--shadow-glow);
+}
+
+@utility shadow-card {
+  box-shadow: var(--shadow-card);
+}
+
+@utility shadow-elegant {
+  box-shadow: var(--shadow-elegant);
+}
+
+@utility transition-smooth {
+  transition: var(--transition-smooth);
+}
+
+@utility text-balance {
+  text-wrap: balance;
+}
+
+@utility clip-angle-band {
+  clip-path: polygon(0 0, 100% 0, calc(100% - 5.5rem) 100%, 0 100%);
+}
+
+@utility clip-angle-br {
+  clip-path: polygon(0 0, 100% 0, calc(100% - 5rem) 100%, 0 100%);
+}
+
+@utility rule-crimson {
+  &::before {
+    content: "";
+    display: block;
+    width: 2.5rem;
+    height: 3px;
+    background: var(--accent);
+    margin-bottom: 1rem;
+  }
+}
+
+@utility skip-link {
+  position: absolute;
+  left: 1rem;
+  top: -4rem;
+  z-index: 100;
+  padding: 0.75rem 1.25rem;
+  background: var(--accent);
+  color: var(--accent-foreground);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  transition: top 0.2s ease;
+  &:focus {
+    top: 1rem;
+  }
+}
