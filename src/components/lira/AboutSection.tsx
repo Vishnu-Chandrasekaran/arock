@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import communityImage from "@/assets/lira/team-collaboration.png.asset.json";
+import communityImage from "@/assets/act/team-collaboration.png";
 import { TreePine, Eye, Target, Heart } from "lucide-react";
 
 const fadeUp = {
@@ -57,7 +57,7 @@ const AboutSection = () => (
           className="relative"
         >
           <img
-            src={communityImage.url}
+            src={communityImage}
             alt="Research team collaborating around a laptop during a strategy meeting"
             className="rounded-lg shadow-xl w-full object-cover aspect-square"
           />
