@@ -12,7 +12,7 @@ import {
   Award,
   HeartHandshake,
 } from "lucide-react";
-import educationAsset from "@/assets/act/education-literacy-euc3.jpg";
+import educationAsset from "@/assets/act/education-literacy-euc3 (1).jpg";
 import healthcareAsset from "@/assets/act/medical-wellness.jpg";
 import shelterAsset from "@/assets/act/Urban_Shelter_Migration_Support.png";
 import climateAsset from "@/assets/act/climate-green.jpg";
