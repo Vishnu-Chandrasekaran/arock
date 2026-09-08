@@ -1,4 +1,4 @@
-import founderImg from "@/assets/act/founder-antony-a.jpeg.asset.json";
+import founderImg from "@/assets/act/founder-antony-a.jpeg";
 
 export const Team = () => (
   <section id="team" className="py-20 md:py-28 bg-secondary/40">
