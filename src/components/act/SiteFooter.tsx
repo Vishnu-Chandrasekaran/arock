@@ -3,7 +3,7 @@ import { z } from "zod";
 import { Facebook, Instagram, Linkedin, Youtube, ArrowRight } from "lucide-react";
 import { Button } from "@/components/act/ui/button";
 import { toast } from "sonner";
-import logoAsset from "@/assets/act/ACT_INDIA-2.png.asset.json";
+import logoAsset from "@/assets/act/ACT_INDIA-2 (1).png";
 
 const emailSchema = z.string().trim().email("Enter a valid email").max(255);
 
@@ -61,7 +61,7 @@ export const SiteFooter = () => {
           <div>
             <div className="flex items-center gap-3 mb-5">
               <img
-                src={logoAsset.url}
+                src={logoAsset}
                 alt="ACT India Arockyaa Charitable Trust logo"
                 className="h-14 w-auto object-contain rounded bg-white p-1"
               />
