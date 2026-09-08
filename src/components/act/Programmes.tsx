@@ -262,7 +262,7 @@ export const Programmes = () => {
                 {current.text}
               </p>
               <button
-                className="inline-flex items-center gap-2 text-sm font-semibold text-white rounded-md px-5 py-2.5 transition-colors duration-300 hover:opacity-90 focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-[#2C2C2C]"
+                className="inline-flex items-center gap-2 text-sm font-semibold text-white rounded-md px-5 py-2.5 transition-colors duration-300 hover:opacity-90 focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-white"
                 style={{ backgroundColor: accent }}
               >
                 Explore programme
