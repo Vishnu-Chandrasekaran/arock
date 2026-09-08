@@ -1,7 +1,7 @@
 import { useState, useRef } from "react";
 import { Menu, X, ChevronDown } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
-import liraLogo from "@/assets/lira/lira-logo.png.asset.json";
+import liraLogo from "@/assets/act/lira-logo.png";
 
 const navLinks = [
   { label: "About", href: "#about" },
