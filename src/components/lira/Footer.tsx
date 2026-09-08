@@ -1,4 +1,4 @@
-import liraLogo from "@/assets/lira/lira-logo.png.asset.json";
+import liraLogo from "@/assets/act/lira-logo.png";
 
 const Footer = () => (
   <footer className="bg-lira-dark text-primary-foreground">
@@ -7,7 +7,7 @@ const Footer = () => (
       <div className="grid md:grid-cols-12 gap-12 mb-12">
         <div className="md:col-span-5">
           <div className="flex items-center gap-3 mb-5">
-            <img src={liraLogo.url} alt="LIRA Logo" className="h-14 w-14 rounded-full object-cover" />
+            <img src={liraLogo} alt="LIRA Logo" className="h-14 w-14 rounded-full object-cover" />
             <div>
               <h3 className="font-display text-xl font-semibold">LIRA</h3>
               <p className="font-body text-[10px] uppercase tracking-[0.18em] text-primary-foreground/50">
