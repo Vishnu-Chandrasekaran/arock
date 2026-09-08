@@ -40,7 +40,7 @@ const Navbar = () => {
       <div className="h-1 w-full bg-accent" />
       <div className="shell flex items-center justify-between h-20">
         <a href="#" className="flex items-center gap-3">
-          <img src={liraLogo.url} alt="LIRA Logo" className="h-16 w-16 rounded-full object-cover ring-1 ring-border shadow-sm" />
+          <img src={liraLogo} alt="LIRA Logo" className="h-16 w-16 rounded-full object-cover ring-1 ring-border shadow-sm" />
           <span className="text-2xl font-display font-semibold text-foreground">LIRA</span>
           <span className="hidden lg:inline text-[11px] uppercase tracking-[0.14em] text-muted-foreground font-body border-l border-border pl-3 max-w-[16rem] leading-tight">
             Linden Institute of Research &amp; Academy
