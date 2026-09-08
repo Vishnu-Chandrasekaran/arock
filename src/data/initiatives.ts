@@ -43,7 +43,7 @@ export const initiatives: Initiative[] = [
     tagline: "Live · Love · Let Live",
     description:
       "Social welfare programs, community development, grassroots initiatives, and impact-driven projects across Tamil Nadu.",
-    logo: actIndiaLogo.url,
+    logo: actIndiaLogo,
     logoAlt:
       "ACT India logo — shield emblem with the motto Live · Love · Let Live",
     url: "/act-india",
@@ -55,7 +55,7 @@ export const initiatives: Initiative[] = [
     tagline: "Linden Institute of Research and Academy",
     description:
       "Research excellence, academic programs, knowledge creation, and institutional learning for sustainable development.",
-    logo: liraLogo.url,
+    logo: liraLogo,
     logoAlt:
       "LIRA logo — circular tree emblem for Linden Institute of Research and Academy",
     url: "/lira",
