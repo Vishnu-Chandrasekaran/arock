@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { Menu, X, Heart } from "lucide-react";
 import { Button } from "@/components/act/ui/button";
 import { cn } from "@/lib/utils";
-import logoAsset from "@/assets/act/ACT_INDIA-2.png.asset.json";
+import logoAsset from "@/assets/act/ACT_INDIA-2 (1).png";
 
 const NAV = [
   { label: "About", href: "#about" },
