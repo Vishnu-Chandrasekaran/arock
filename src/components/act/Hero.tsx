@@ -1,6 +1,6 @@
 import { Button } from "@/components/act/ui/button";
 import { ArrowRight, Heart } from "lucide-react";
-import heroImage from "@/assets/act/hero-community.jpg.asset.json";
+import heroImage from "@/assets/act/hero-community.jpg";
 
 export const Hero = () => (
   <section id="top" className="pt-16 md:pt-20">
@@ -14,7 +14,7 @@ export const Hero = () => (
     {/* Full-bleed hero with centered overlay content */}
     <div className="relative isolate min-h-[62vh] md:min-h-[74vh] flex items-center justify-center overflow-hidden">
       <img
-        src={heroImage.url}
+        src={heroImage}
         alt="ACT India founder receiving Global Achievers Council international award for charitable service"
         width={1920}
         height={1280}
