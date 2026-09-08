@@ -1,5 +1,5 @@
-import actIndiaLogo from "@/assets/act/ACT_INDIA-2.png.asset.json";
-import liraLogo from "@/assets/lira/lira-logo.png.asset.json";
+import actIndiaLogo from "@/assets/act/ACT_INDIA-2 (1).png";
+import liraLogo from "@/assets/act/lira-logo.png";
 
 export interface Initiative {
   id: string;
