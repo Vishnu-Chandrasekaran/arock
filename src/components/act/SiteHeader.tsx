@@ -38,7 +38,7 @@ export const SiteHeader = () => {
       <div className="flex items-stretch justify-between h-16 md:h-20 pl-5 md:pl-8">
         <a href="#top" className="flex items-center gap-2 shrink-0" aria-label="ACT India home">
           <img
-            src={logoAsset.url}
+            src={logoAsset}
             alt="ACT India Arockyaa Charitable Trust logo"
             className="h-10 md:h-14 w-auto object-contain"
           />
