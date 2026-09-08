@@ -12,14 +12,14 @@ import {
   Award,
   HeartHandshake,
 } from "lucide-react";
-import educationAsset from "@/assets/act/education-literacy-euc3.jpg.asset.json";
-import healthcareAsset from "@/assets/act/medical-wellness.jpg.asset.json";
-import shelterAsset from "@/assets/act/Urban_Shelter_Migration_Support.png.asset.json";
-import climateAsset from "@/assets/act/climate-green.jpg.asset.json";
-import empowermentAsset from "@/assets/act/empowerment-youth-women.png.asset.json";
+import educationAsset from "@/assets/act/education-literacy-euc3.jpg";
+import healthcareAsset from "@/assets/act/medical-wellness.jpg";
+import shelterAsset from "@/assets/act/Urban_Shelter_Migration_Support.png";
+import climateAsset from "@/assets/act/climate-green.jpg";
+import empowermentAsset from "@/assets/act/empowerment-youth-women.png";
 import disasterImg from "@/assets/act/programme-disaster.jpg";
-import digitalAsset from "@/assets/act/digital-media-literacy.png.asset.json";
-import skillsAsset from "@/assets/act/skill-development.jpg.asset.json";
+import digitalAsset from "@/assets/act/digital-media-literacy.png";
+import skillsAsset from "@/assets/act/skill-development.jpg";
 import deaddictionImg from "@/assets/act/programme-deaddiction.jpg";
 
 const ACCENTS: Record<string, string> = {
