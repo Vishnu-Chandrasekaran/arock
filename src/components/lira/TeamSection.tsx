@@ -165,7 +165,7 @@ const teamGroups = [
 ];
 
 const TeamSection = () => (
-  <section id="team" className="py-24 bg-background">
+  <section id="team" className="section-pad bg-background">
     <div className="shell">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
@@ -191,7 +191,7 @@ const TeamSection = () => (
           viewport={{ once: true, margin: "-80px" }}
           variants={fadeUp}
           custom={0}
-          className="bg-card border border-border rounded-lg p-6 md:p-8"
+          className="bg-card border border-border rounded-lg card-elevated p-6 md:p-8"
         >
           <div className="flex flex-col md:flex-row md:items-start gap-8">
             <div className="flex flex-col items-center gap-3 md:w-1/3 shrink-0">
@@ -235,7 +235,7 @@ const TeamSection = () => (
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-80px" }}
-          className="bg-card border border-border rounded-lg p-6 md:p-8"
+          className="bg-card border border-border rounded-lg card-elevated p-6 md:p-8"
         >
           <div className="flex items-center gap-3 mb-2">
             <div className="w-12 h-12 rounded-full bg-accent/10 flex items-center justify-center shrink-0">
@@ -252,7 +252,7 @@ const TeamSection = () => (
         </motion.div>
 
         {/* International Research Associates — one row per associate */}
-        {teamGroups[1]!.memberBios?.map((bio, i) => (
+        {teamGroups[1]?.memberBios?.map((bio, i) => (
           <motion.div
             key={bio.name}
             initial="hidden"
@@ -260,7 +260,7 @@ const TeamSection = () => (
             viewport={{ once: true, margin: "-80px" }}
             variants={fadeUp}
             custom={i}
-            className="bg-card border border-border rounded-lg p-6 md:p-8"
+            className="bg-card border border-border rounded-lg card-elevated p-6 md:p-8"
           >
             <div className="flex flex-col md:flex-row md:items-start gap-8">
               <div className="flex flex-col items-center gap-3 md:w-1/3 shrink-0">
@@ -322,7 +322,7 @@ const TeamSection = () => (
           viewport={{ once: true, margin: "-80px" }}
           variants={fadeUp}
           custom={2}
-          className="bg-card border border-border rounded-lg p-6 md:p-8"
+          className="bg-card border border-border rounded-lg card-elevated p-6 md:p-8"
         >
           <div className="flex flex-col md:flex-row md:items-start gap-8">
             <div className="flex flex-col items-center gap-3 md:w-1/3 shrink-0">
@@ -352,7 +352,7 @@ const TeamSection = () => (
                 </h3>
               </div>
               <ul className="space-y-2">
-                {teamGroups[2]!.responsibilities.map((resp, idx) => (
+                {teamGroups[2]?.responsibilities.map((resp, idx) => (
                   <li
                     key={idx}
                     className="font-body text-sm text-muted-foreground leading-relaxed pl-4 border-l-2 border-accent/20"
@@ -372,7 +372,7 @@ const TeamSection = () => (
           viewport={{ once: true, margin: "-80px" }}
           variants={fadeUp}
           custom={3}
-          className="bg-card border border-border rounded-lg p-6 md:p-8"
+          className="bg-card border border-border rounded-lg card-elevated p-6 md:p-8"
         >
           <div className="flex flex-col md:flex-row md:items-start gap-8">
             <div className="flex flex-col items-center gap-3 md:w-1/3 shrink-0">
@@ -402,7 +402,7 @@ const TeamSection = () => (
                 </h3>
               </div>
               <ul className="space-y-2">
-                {teamGroups[3]!.responsibilities.map((resp, idx) => (
+                {teamGroups[3]?.responsibilities.map((resp, idx) => (
                   <li
                     key={idx}
                     className="font-body text-sm text-muted-foreground leading-relaxed pl-4 border-l-2 border-accent/20"
@@ -420,7 +420,7 @@ const TeamSection = () => (
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-80px" }}
-          className="bg-card border border-border rounded-lg p-6 md:p-8"
+          className="bg-card border border-border rounded-lg card-elevated p-6 md:p-8"
         >
           <div className="flex items-center gap-3 mb-2">
             <div className="w-12 h-12 rounded-full bg-accent/10 flex items-center justify-center shrink-0">
@@ -431,7 +431,7 @@ const TeamSection = () => (
             </h3>
           </div>
           <ul className="space-y-2">
-            {teamGroups[4]!.responsibilities.map((resp, idx) => (
+            {teamGroups[4]?.responsibilities.map((resp, idx) => (
               <li
                 key={idx}
                 className="font-body text-sm text-muted-foreground leading-relaxed pl-4 border-l-2 border-accent/20"
@@ -443,7 +443,7 @@ const TeamSection = () => (
         </motion.div>
 
         {/* Field Coordinators / Data Collectors — one row per member */}
-        {teamGroups[4]!.members.map((member, i) => (
+        {teamGroups[4]?.members.map((member, i) => (
           <motion.div
             key={member}
             initial="hidden"
@@ -451,7 +451,7 @@ const TeamSection = () => (
             viewport={{ once: true, margin: "-80px" }}
             variants={fadeUp}
             custom={i}
-            className="bg-card border border-border rounded-lg p-6 md:p-8"
+            className="bg-card border border-border rounded-lg card-elevated p-6 md:p-8"
           >
             <div className="flex flex-col md:flex-row md:items-start gap-8">
               <div className="flex flex-col items-center gap-3 md:w-1/3 shrink-0">
@@ -495,7 +495,7 @@ const TeamSection = () => (
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-80px" }}
-          className="bg-card border border-border rounded-lg p-6 md:p-8"
+          className="bg-card border border-border rounded-lg card-elevated p-6 md:p-8"
         >
           <div className="flex items-center gap-3 mb-2">
             <div className="w-12 h-12 rounded-full bg-accent/10 flex items-center justify-center shrink-0">
@@ -512,7 +512,7 @@ const TeamSection = () => (
         </motion.div>
 
         {/* Data Scientist / Technology Integration Specialist — one row per associate */}
-        {teamGroups[5]!.memberBios?.map((bio, i) => (
+        {teamGroups[5]?.memberBios?.map((bio, i) => (
           <motion.div
             key={bio.name}
             initial="hidden"
@@ -520,7 +520,7 @@ const TeamSection = () => (
             viewport={{ once: true, margin: "-80px" }}
             variants={fadeUp}
             custom={i}
-            className="bg-card border border-border rounded-lg p-6 md:p-8"
+            className="bg-card border border-border rounded-lg card-elevated p-6 md:p-8"
           >
             <div className="flex flex-col md:flex-row md:items-start gap-8">
               <div className="flex flex-col items-center gap-3 md:w-1/3 shrink-0">
@@ -582,11 +582,11 @@ const TeamSection = () => (
           viewport={{ once: true, margin: "-80px" }}
           variants={fadeUp}
           custom={6}
-          className="bg-card border border-border rounded-lg p-6 md:p-8"
+          className="bg-card border border-border rounded-lg card-elevated p-6 md:p-8"
         >
           <div className="flex flex-col md:flex-row md:items-start gap-8">
             <div className="grid grid-cols-2 md:grid-cols-2 gap-5 md:w-2/5 shrink-0 self-start">
-              {teamGroups[6]!.memberBios?.map((bio) => (
+              {teamGroups[6]?.memberBios?.map((bio) => (
                 <div key={bio.name} className="flex flex-col items-center gap-3">
                   {photos[bio.name] ? (
                     <img
@@ -627,7 +627,7 @@ const TeamSection = () => (
                 </h3>
               </div>
               <div className="space-y-6">
-                {teamGroups[6]!.memberBios?.map((bio) => (
+                {teamGroups[6]?.memberBios?.map((bio) => (
                   <div key={bio.name} className="border-l-2 border-accent/30 pl-4">
                     <h4 className="font-display text-base font-semibold text-foreground mb-2">
                       {bio.name}
@@ -657,7 +657,7 @@ const TeamSection = () => (
             viewport={{ once: true, margin: "-80px" }}
             variants={fadeUp}
             custom={i + 1}
-            className="bg-card border border-border rounded-lg p-6 md:p-8"
+            className="bg-card border border-border rounded-lg card-elevated p-6 md:p-8"
           >
             <div className="flex flex-col md:flex-row md:items-start gap-6">
               <div className="w-14 h-14 rounded-full bg-accent/10 flex items-center justify-center shrink-0">

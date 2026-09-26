@@ -18,6 +18,7 @@ const navLinks = [
   },
   { label: "Team", href: "#team" },
   { label: "Governance", href: "#governance" },
+  { label: "Latest Event", href: "#latest-event" },
   { label: "Support", href: "#support" },
 ];
 
@@ -37,7 +38,7 @@ const Navbar = () => {
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-md border-b border-border shadow-sm">
-      <div className="h-1 w-full bg-accent" />
+      <div className="h-1 w-full bg-primary" />
       <div className="shell flex items-center justify-between h-20">
         <a href="#" className="flex items-center gap-3">
           <img src={liraLogo} alt="LIRA Logo" className="h-16 w-16 rounded-full object-cover ring-1 ring-border shadow-sm" />
@@ -71,7 +72,7 @@ const Navbar = () => {
                       animate={{ opacity: 1, y: 0 }}
                       exit={{ opacity: 0, y: 8 }}
                       transition={{ duration: 0.15 }}
-                      className="absolute top-full left-0 mt-3 w-72 bg-card border border-border border-t-2 border-t-accent shadow-xl overflow-hidden"
+                      className="absolute top-full left-0 mt-3 w-72 bg-card border border-border border-t-2 border-t-accent shadow-emphasis rounded-md overflow-hidden"
                     >
                       <div className="py-2">
                         {link.subLinks.map((sub) => (
@@ -101,7 +102,7 @@ const Navbar = () => {
           )}
           <a
             href="#support"
-            className="bg-accent text-accent-foreground px-5 py-2.5 text-[11px] font-body font-bold uppercase tracking-[0.16em] hover:brightness-110 transition-all"
+            className="bg-accent text-accent-foreground px-5 py-2.5 rounded-sm whitespace-nowrap text-[11px] font-body font-bold uppercase tracking-[0.16em] hover:brightness-110 transition-all"
           >
             Partner With Us
           </a>

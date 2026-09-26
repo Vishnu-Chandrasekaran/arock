@@ -24,8 +24,8 @@ export const Transparency = () => (
   <section id="transparency" className="py-20 md:py-28">
     <div className="container">
       <div className="text-center max-w-2xl mx-auto mb-14">
-        <span className="text-accent font-semibold tracking-widest text-xs uppercase">Transparency</span>
-        <h2 className="font-display font-bold text-4xl md:text-5xl mt-3 mb-4">
+        <span className="eyebrow text-primary">Transparency</span>
+        <h2 className="font-bold text-4xl md:text-5xl mt-4 mb-4">
           Where every rupee goes.
         </h2>
         <p className="text-muted-foreground text-lg">
@@ -33,14 +33,14 @@ export const Transparency = () => (
         </p>
       </div>
 
-      <div className="grid lg:grid-cols-3 gap-6 lg:gap-8">
+      <div className="grid lg:grid-cols-3 border-t border-l border-border">
         {/* Fund allocation */}
-        <div className="lg:col-span-2 bg-card rounded-3xl p-6 md:p-10 shadow-card border border-border">
-          <h3 className="font-display font-bold text-2xl mb-1">How we use funds</h3>
+        <div className="lg:col-span-2 bg-card p-6 md:p-10 border-r border-b border-border">
+          <h3 className="font-bold text-2xl mb-1">How we use funds</h3>
           <p className="text-sm text-muted-foreground mb-8">FY 2024–25 audited allocation</p>
 
           {/* Stacked bar */}
-          <div className="h-4 w-full rounded-full overflow-hidden flex bg-muted mb-8">
+          <div className="h-4 w-full overflow-hidden flex bg-muted mb-8">
             {FUNDS.map((f) => (
               <div
                 key={f.label}
@@ -54,9 +54,9 @@ export const Transparency = () => (
           <div className="grid sm:grid-cols-2 gap-4">
             {FUNDS.map((f) => (
               <div key={f.label} className="flex items-center gap-3">
-                <span className={`${f.color} h-3 w-3 rounded-full shrink-0`} />
+                <span className={`${f.color} h-3 w-3 shrink-0`} />
                 <span className="font-medium flex-1">{f.label}</span>
-                <span className="font-display font-bold text-lg tabular-nums">{f.value}%</span>
+                <span className="font-bold text-lg tabular-nums">{f.value}%</span>
               </div>
             ))}
           </div>
@@ -70,7 +70,7 @@ export const Transparency = () => (
                 <li key={r.year}>
                   <a
                     href="#"
-                    className="flex items-center justify-between p-3 rounded-xl hover:bg-secondary transition-smooth group"
+                    className="flex items-center justify-between p-3 border-b border-border hover:bg-secondary transition-smooth group"
                   >
                     <span className="font-medium">Annual Report — {r.year}</span>
                     <span className="flex items-center gap-2 text-sm text-muted-foreground group-hover:text-accent">
@@ -84,20 +84,20 @@ export const Transparency = () => (
         </div>
 
         {/* Registrations */}
-        <div className="bg-primary text-primary-foreground rounded-3xl p-6 md:p-10 shadow-warm">
-          <Shield className="h-10 w-10 text-accent mb-5" />
-          <h3 className="font-display font-bold text-2xl mb-2">Registered & certified</h3>
-          <p className="text-primary-foreground/70 text-sm mb-8">
+        <div className="bg-foreground text-background p-6 md:p-10 border-r border-b border-border">
+          <Shield className="h-10 w-10 text-primary mb-5" />
+          <h3 className="font-bold text-2xl mb-2">Registered & certified</h3>
+          <p className="text-background/70 text-sm mb-8">
             Donations to ACT India are eligible for tax deduction under Section 80G of the Income
             Tax Act, India.
           </p>
           <dl className="space-y-5">
             {REGS.map((r) => (
               <div key={r.label}>
-                <dt className="text-xs uppercase tracking-widest text-accent font-semibold">
+                <dt className="font-mono text-xs uppercase tracking-widest text-primary font-semibold">
                   {r.label}
                 </dt>
-                <dd className="font-mono text-sm mt-1 text-primary-foreground/95">{r.value}</dd>
+                <dd className="font-mono text-sm mt-1 text-background/95">{r.value}</dd>
               </div>
             ))}
           </dl>

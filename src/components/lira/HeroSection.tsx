@@ -17,9 +17,11 @@ const HeroSection = () => {
           transition={{ duration: 1, ease: "easeOut" }}
           className="max-w-3xl"
         >
-          <p className="font-body text-[11px] font-bold tracking-[0.28em] uppercase text-highlight mb-6">
-            ACT India's Strategic Think-Tank
-          </p>
+          <div className="inline-flex items-center bg-lira-gold text-lira-dark rounded-xs px-4 py-2 mb-8">
+            <span className="font-body text-[11px] font-bold tracking-[0.28em] uppercase">
+              ACT India's Strategic Think-Tank
+            </span>
+          </div>
           <h1 className="font-display text-4xl sm:text-5xl md:text-6xl font-semibold text-primary-foreground leading-[1.05] mb-6">
             Linden Institute of{" "}
             <span className="italic">Research</span> &amp; Academy
@@ -37,13 +39,13 @@ const HeroSection = () => {
           <div className="flex flex-wrap gap-3">
             <a
               href="#research"
-              className="px-8 py-4 bg-accent text-accent-foreground font-body font-bold text-xs uppercase tracking-[0.18em] hover:brightness-110 transition-all"
+              className="px-8 py-4 bg-accent text-accent-foreground rounded-sm font-body font-bold text-xs uppercase tracking-[0.18em] hover:brightness-110 transition-all"
             >
               Explore Research
             </a>
             <a
               href="#about"
-              className="px-8 py-4 border border-primary-foreground/25 text-primary-foreground font-body font-bold text-xs uppercase tracking-[0.18em] hover:bg-primary-foreground/10 transition-colors"
+              className="px-8 py-4 border border-primary-foreground/25 rounded-sm text-primary-foreground font-body font-bold text-xs uppercase tracking-[0.18em] hover:bg-primary-foreground/10 transition-colors"
             >
               Who We Are
             </a>
@@ -53,7 +55,7 @@ const HeroSection = () => {
 
       {/* Angled crimson footer band — unique structural signature */}
       <div className="absolute bottom-0 left-0 right-0 z-10">
-        <div className="h-1 w-full bg-highlight" />
+        <div className="h-1 w-full bg-lira-gold" />
         <div className="bg-primary/95 backdrop-blur-sm">
           <div className="shell grid grid-cols-2 md:grid-cols-4 divide-x divide-primary-foreground/10">
             {[

@@ -20,7 +20,7 @@ const symbols = [
 ];
 
 const LindenSymbol = () => (
-  <section className="py-24 bg-primary text-primary-foreground">
+  <section className="section-pad bg-primary text-primary-foreground">
     <div className="shell text-center">
       <motion.div
         initial={{ opacity: 0, y: 20 }}

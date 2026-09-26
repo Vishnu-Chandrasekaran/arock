@@ -1,20 +1,20 @@
 import founderImg from "@/assets/act/founder-antony-a.jpeg";
 
 export const Team = () => (
-  <section id="team" className="py-20 md:py-28 bg-secondary/40">
+  <section id="team" className="py-20 md:py-28 bg-secondary border-y border-border">
     <div className="container">
       <div className="text-center max-w-2xl mx-auto mb-14">
-        <span className="text-accent font-semibold tracking-widest text-xs uppercase">Leadership</span>
-        <h2 className="font-display font-bold text-4xl md:text-5xl mt-3 mb-4">
+        <span className="eyebrow text-primary">Leadership</span>
+        <h2 className="font-bold text-4xl md:text-5xl mt-4 mb-4">
           A Message from the Founder
         </h2>
       </div>
 
       <div className="grid lg:grid-cols-12 gap-10 lg:gap-16 items-start">
         <div className="lg:col-span-4 flex flex-col items-center lg:items-start">
-          <div className="w-full max-w-sm aspect-[3/4] rounded-2xl overflow-hidden shadow-card">
+          <div className="w-full max-w-sm aspect-[3/4] overflow-hidden border-l-8 border-primary">
             <img
-              src={founderImg}
+              src={founderImg.url}
               alt="Mr. Antony A, Founder and President of Arockyaa Charitable Trust (ACT INDIA)"
               width={600}
               height={800}
@@ -23,7 +23,7 @@ export const Team = () => (
             />
           </div>
           <div className="mt-5 text-center lg:text-left">
-            <h3 className="font-display font-bold text-2xl">Mr. Antony A</h3>
+            <h3 className="font-bold text-2xl">Mr. Antony A</h3>
             <p className="text-accent font-semibold text-sm tracking-wide uppercase mt-1">
               Founder & President
             </p>
@@ -34,7 +34,7 @@ export const Team = () => (
         </div>
 
         <div className="lg:col-span-8 space-y-5 text-foreground/90 leading-[1.75]">
-          <h3 className="font-display font-bold text-2xl md:text-3xl text-foreground">
+          <h3 className="font-bold text-2xl md:text-3xl text-foreground">
             The Heart of ACT INDIA
           </h3>
 
@@ -59,7 +59,7 @@ export const Team = () => (
           </p>
 
           <div className="pt-4 border-t border-border">
-            <p className="font-display font-bold text-foreground">In Solidarity and Hope,</p>
+            <p className="font-bold text-foreground">In Solidarity and Hope,</p>
             <p className="mt-1 font-semibold">Mr. Antony A</p>
             <p className="text-sm text-muted-foreground">
               Founder and President, Arockyaa Charitable Trust (ACT INDIA)

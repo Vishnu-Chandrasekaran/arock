@@ -1,8 +1,8 @@
 import { Calendar, MapPin, Download } from "lucide-react";
-import { Button } from "@/components/act/ui/button";
-import brochureAsset from "@/assets/act/icce2026-brochure.jpeg.asset.json";
-import videoAsset from "@/assets/act/icce2026-video.mp4.asset.json";
-import pdfAsset from "@/assets/act/icce2026-brochure.pdf.asset.json";
+import { Button } from "@/components/ui/button";
+import brochureAsset from "@/assets/icce2026-brochure.jpeg.asset.json";
+import videoAsset from "@/assets/icce2026-video.mp4.asset.json";
+import pdfAsset from "@/assets/icce2026-brochure.pdf.asset.json";
 
 export const UpcomingEvents = () => {
   return (

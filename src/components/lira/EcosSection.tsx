@@ -10,7 +10,7 @@ const pillars = [
 ];
 
 const EcosSection = () => (
-  <section id="ecos" className="py-24 bg-muted">
+  <section id="ecos" className="section-pad bg-muted">
     <div className="shell">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
@@ -36,7 +36,7 @@ const EcosSection = () => (
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: i * 0.1, duration: 0.5 }}
-            className="bg-background p-6 rounded-lg border border-border text-center group hover:shadow-lg transition-shadow"
+            className="bg-background p-6 rounded-lg border border-border card-elevated text-center group"
           >
             <div className="w-14 h-14 rounded-full bg-accent/10 flex items-center justify-center mx-auto mb-4 group-hover:bg-accent/20 transition-colors">
               <p.icon className="w-6 h-6 text-accent" />

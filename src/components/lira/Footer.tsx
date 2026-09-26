@@ -2,7 +2,7 @@ import liraLogo from "@/assets/act/lira-logo.png";
 
 const Footer = () => (
   <footer className="bg-lira-dark text-primary-foreground">
-    <div className="h-1 w-full bg-accent" />
+    <div className="h-1 w-full bg-lira-gold" />
     <div className="shell py-16">
       <div className="grid md:grid-cols-12 gap-12 mb-12">
         <div className="md:col-span-5">
@@ -41,7 +41,7 @@ const Footer = () => (
           </p>
           <a
             href="#support"
-            className="inline-block mt-6 bg-accent text-accent-foreground px-5 py-3 font-body text-[11px] font-bold uppercase tracking-[0.16em] hover:brightness-110 transition-all"
+            className="inline-block mt-6 bg-accent text-accent-foreground px-5 py-3 rounded-sm font-body text-[11px] font-bold uppercase tracking-[0.16em] hover:brightness-110 transition-all"
           >
             Partner With Us
           </a>

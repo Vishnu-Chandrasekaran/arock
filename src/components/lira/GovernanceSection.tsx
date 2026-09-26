@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { Shield, Users, BarChart3 } from "lucide-react";
 
 const GovernanceSection = () => (
-  <section id="governance" className="py-24 bg-muted">
+  <section id="governance" className="section-pad bg-muted">
     <div className="shell">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
@@ -31,7 +31,7 @@ const GovernanceSection = () => (
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: i * 0.15 }}
-            className="bg-background p-8 rounded-lg border border-border text-center"
+            className="bg-background p-8 rounded-lg border border-border card-elevated text-center"
           >
             <item.icon className="w-8 h-8 text-primary mx-auto mb-4" />
             <h3 className="font-display text-lg font-semibold text-foreground mb-3">{item.title}</h3>

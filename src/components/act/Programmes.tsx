@@ -23,15 +23,15 @@ import skillsAsset from "@/assets/act/skill-development.jpg";
 import deaddictionImg from "@/assets/act/programme-deaddiction.jpg";
 
 const ACCENTS: Record<string, string> = {
-  education: "#1F4E78",
-  healthcare: "#2E7D6E",
-  shelter: "#B8562B",
-  climate: "#1B5E3F",
-  empowerment: "#8B3A3A",
-  disaster: "#4A6C8C",
-  digital: "#3D5A80",
-  skills: "#B8860B",
-  deaddiction: "#6B4C8C",
+  education: "hsl(var(--primary))",
+  healthcare: "hsl(var(--primary))",
+  shelter: "hsl(var(--primary))",
+  climate: "hsl(var(--primary))",
+  empowerment: "hsl(var(--primary))",
+  disaster: "hsl(var(--primary))",
+  digital: "hsl(var(--primary))",
+  skills: "hsl(var(--primary))",
+  deaddiction: "hsl(var(--primary))",
 };
 
 const ICONS: Record<string, React.ElementType> = {
@@ -115,33 +115,23 @@ const PROGRAMMES = [
 export const Programmes = () => {
   const [active, setActive] = useState(PROGRAMMES[0]!.id);
   const current = PROGRAMMES.find((p) => p.id === active) || PROGRAMMES[0]!;
-  const accent = ACCENTS[current.id]!;
+  const accent = ACCENTS[current.id];
 
   return (
     <section
       id="programmes"
-      className="py-16 md:py-24"
-      style={{ backgroundColor: "#F8F7F5" }}
+      className="py-16 md:py-24 bg-secondary border-y border-border"
     >
-      <div className="max-w-[1200px] mx-auto px-6">
+      <div className="container">
         {/* Section header */}
         <div className="max-w-2xl mb-10 md:mb-14">
-          <span
-            className="text-[11px] font-semibold uppercase tracking-[0.1em]"
-            style={{ color: "#6B8A92" }}
-          >
+          <span className="eyebrow text-primary">
             Programmes
           </span>
-          <h2
-            className="font-display font-bold text-3xl md:text-4xl mt-2 mb-4"
-            style={{ color: "#1F2937" }}
-          >
+          <h2 className="font-bold text-3xl md:text-4xl mt-4 mb-4 text-foreground">
             What we do on the ground
           </h2>
-          <p
-            className="text-[15px] leading-[1.7]"
-            style={{ color: "#5F5E5A" }}
-          >
+          <p className="text-[15px] leading-[1.7] text-muted-foreground">
             Our work is designed with communities, not for them. Each programme
             addresses a practical barrier while building long-term resilience.
           </p>
@@ -149,9 +139,9 @@ export const Programmes = () => {
 
         <div className="grid lg:grid-cols-2 gap-8 items-start">
           {/* Category cards */}
-          <div className="flex flex-col gap-3" role="tablist" aria-label="Programme categories">
+          <div className="flex flex-col border-t border-l border-border" role="tablist" aria-label="Programme categories">
             {PROGRAMMES.map((programme) => {
-              const Icon = ICONS[programme.id]!;
+              const Icon = ICONS[programme.id];
               const isActive = active === programme.id;
               const colour = ACCENTS[programme.id];
 
@@ -164,11 +154,10 @@ export const Programmes = () => {
                   id={`tab-${programme.id}`}
                   onClick={() => setActive(programme.id)}
                   className={cn(
-                    "group text-left rounded-[12px] border transition-all duration-300 outline-none focus-visible:ring-2 focus-visible:ring-offset-2",
-                    isActive ? "bg-white" : "bg-[#FAFAF8] hover:bg-white"
+                     "group text-left border-r border-b border-border transition-all duration-300 outline-none focus-visible:ring-2 focus-visible:ring-offset-2",
+                     isActive ? "bg-background" : "bg-secondary hover:bg-background"
                   )}
                   style={{
-                    borderColor: "#E0E0E0",
                     borderLeftWidth: "4px",
                     borderLeftColor: colour,
                     padding: "1.5rem",
@@ -176,9 +165,8 @@ export const Programmes = () => {
                 >
                   <div className="flex items-start gap-4">
                     <span
-                      className="inline-flex items-center justify-center w-9 h-9 rounded-lg shrink-0"
+                       className="inline-flex items-center justify-center w-9 h-9 shrink-0 bg-secondary text-primary"
                       style={{
-                        backgroundColor: `${colour}10`,
                         color: colour,
                       }}
                       aria-hidden="true"
@@ -189,16 +177,13 @@ export const Programmes = () => {
                       {programme.title} programme
                     </span>
                     <div className="flex-1 min-w-0">
-                      <span
-                        className="block text-[11px] font-semibold uppercase tracking-[0.1em] mb-1"
-                        style={{ color: "#6B8A92" }}
-                      >
+                       <span className="block font-mono text-[10px] font-semibold uppercase tracking-[0.12em] mb-1 text-muted-foreground">
                         {programme.label}
                       </span>
                       <span
                         className={cn(
                           "block font-bold text-base leading-tight",
-                          isActive ? "text-[#1F2937]" : "text-[#1F2937]/80 group-hover:text-[#1F2937]"
+                           isActive ? "text-foreground" : "text-muted-foreground group-hover:text-foreground"
                         )}
                       >
                         {programme.title}
@@ -225,8 +210,7 @@ export const Programmes = () => {
             id="programme-panel"
             role="tabpanel"
             aria-labelledby={`tab-${current.id}`}
-            className="relative overflow-hidden rounded-[12px] min-h-[420px] md:min-h-[540px]"
-            style={{ backgroundColor: "#2C2C2C" }}
+             className="relative overflow-hidden min-h-[420px] md:min-h-[540px] bg-foreground"
           >
             <img
               src={current.image}
@@ -239,30 +223,28 @@ export const Programmes = () => {
             <div
               className="absolute inset-0"
               style={{
-                background: `linear-gradient(180deg, rgba(31,41,55,0.25) 0%, ${accent}66 100%)`,
+                 background: "linear-gradient(180deg, transparent 0%, hsl(var(--foreground) / 0.9) 100%)",
               }}
               aria-hidden="true"
             />
             <div className="absolute bottom-0 left-0 right-0 p-6 md:p-10">
               <span
-                className="inline-block text-[11px] font-semibold uppercase tracking-[0.1em] mb-2 px-2 py-1 rounded"
-                style={{ backgroundColor: `${accent}33`, color: "#F5F1E8" }}
+                 className="inline-block font-mono text-[10px] font-semibold uppercase tracking-[0.12em] mb-3 px-2 py-1 bg-primary text-primary-foreground"
               >
                 {current.label}
               </span>
               <h3
-                className="font-display font-bold text-2xl md:text-[28px] text-white mb-3 leading-tight"
+                 className="font-bold text-2xl md:text-[28px] text-background mb-3 leading-tight"
               >
                 {current.title}
               </h3>
               <p
-                className="text-[15px] leading-[1.7] mb-6 max-w-xl"
-                style={{ color: "#F5F1E8" }}
+                 className="text-[15px] leading-[1.7] mb-6 max-w-xl text-background/85"
               >
                 {current.text}
               </p>
               <button
-                className="inline-flex items-center gap-2 text-sm font-semibold text-white rounded-md px-5 py-2.5 transition-colors duration-300 hover:opacity-90 focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-white"
+                 className="inline-flex items-center gap-2 text-sm font-semibold text-primary-foreground px-5 py-2.5 transition-colors duration-300 hover:opacity-90 focus-visible:ring-2 focus-visible:ring-background focus-visible:ring-offset-2 focus-visible:ring-offset-foreground"
                 style={{ backgroundColor: accent }}
               >
                 Explore programme

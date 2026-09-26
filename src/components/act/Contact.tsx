@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { z } from "zod";
 import { Mail, MapPin, Phone, Send } from "lucide-react";
-import { Button } from "@/components/act/ui/button";
+import { Button } from "@/components/ui/button";
 import { toast } from "sonner";
 
 const schema = z.object({

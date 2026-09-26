@@ -10,6 +10,7 @@ import TeamSection from "@/components/lira/TeamSection";
 import GovernanceSection from "@/components/lira/GovernanceSection";
 import SupportSection from "@/components/lira/SupportSection";
 import Footer from "@/components/lira/Footer";
+import LatestEventSection from "@/components/lira/LatestEventSection";
 
 const title =
   "LIRA — Linden Institute of Research and Academy | Arockyaa Charitable Trust";
@@ -70,6 +71,7 @@ function LiraPage() {
         <ResearchDomains />
         <TeamSection />
         <GovernanceSection />
+        <LatestEventSection />
         <SupportSection />
       </main>
       <Footer />

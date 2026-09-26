@@ -18,7 +18,7 @@ const values = [
 ];
 
 const AboutSection = () => (
-  <section id="about" className="py-24 bg-background">
+  <section id="about" className="section-pad bg-background">
     <div className="shell">
       {/* Who We Are */}
       <div className="grid md:grid-cols-2 gap-16 items-center mb-24">
@@ -59,9 +59,9 @@ const AboutSection = () => (
           <img
             src={communityImage}
             alt="Research team collaborating around a laptop during a strategy meeting"
-            className="rounded-lg shadow-xl w-full object-cover aspect-square"
+            className="rounded-lg shadow-emphasis w-full object-cover aspect-square"
           />
-          <div className="absolute -bottom-6 -left-6 bg-primary text-primary-foreground p-6 rounded-lg shadow-lg max-w-[200px]">
+          <div className="absolute -bottom-6 -left-6 bg-primary text-primary-foreground p-6 rounded-lg shadow-emphasis border-l-4 border-lira-gold max-w-[200px]">
             <p className="font-display text-2xl font-bold">Since 2008</p>
             <p className="font-body text-sm opacity-80">Transforming lives</p>
           </div>
@@ -112,7 +112,7 @@ const AboutSection = () => (
             viewport={{ once: true }}
             variants={fadeUp}
             custom={i}
-            className="bg-card p-6 rounded-lg border border-border text-center"
+            className="bg-card p-6 rounded-lg border border-border card-elevated text-center"
           >
             <div className="w-12 h-12 rounded-full bg-accent/10 flex items-center justify-center mx-auto mb-4">
               <v.icon className="w-5 h-5 text-accent" />

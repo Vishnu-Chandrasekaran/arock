@@ -1,58 +1,64 @@
-import { Button } from "@/components/act/ui/button";
+import { Button } from "@/components/ui/button";
 import { ArrowRight, Heart } from "lucide-react";
 import heroImage from "@/assets/act/hero-community.jpg";
 
 export const Hero = () => (
   <section id="top" className="pt-16 md:pt-20">
-    {/* Institutional breadcrumb strip */}
-    <div className="bg-secondary border-b border-border">
-      <div className="container py-3 eyebrow text-muted-foreground">
-        Arockyaa Charitable Trust <span className="mx-2 text-border">/</span> ACT India
-      </div>
-    </div>
-
-    {/* Full-bleed hero with centered overlay content */}
-    <div className="relative isolate min-h-[62vh] md:min-h-[74vh] flex items-center justify-center overflow-hidden">
+    <div className="relative isolate min-h-[600px] flex items-center overflow-hidden bg-secondary">
       <img
         src={heroImage}
-        alt="ACT India founder receiving Global Achievers Council international award for charitable service"
+        alt="ACT India founder receiving the Global Achievers Council international award for charitable service, on stage with community members"
         width={1920}
         height={1280}
         fetchPriority="high"
+        decoding="async"
         className="absolute inset-0 w-full h-full object-cover"
       />
+      {/* transparent → dark gradient keeps the photo visible while text stays legible */}
       <div className="absolute inset-0 bg-gradient-hero" aria-hidden="true" />
 
-      <div className="relative z-10 container text-center px-4 py-16">
-        <p className="inline-flex items-center gap-2 text-[11px] font-bold tracking-[0.28em] uppercase text-primary mb-6">
-          <span className="w-2 h-2 rounded-full bg-primary" />
-          Since 2008 · Tamil Nadu, India
-        </p>
-        <h1 className="font-display font-semibold text-4xl sm:text-5xl md:text-6xl lg:text-7xl leading-[1.05] text-background max-w-4xl mx-auto mb-6">
-          Live, Love, Let Live.
-        </h1>
-        <p className="text-base md:text-lg leading-relaxed text-background/85 max-w-2xl mx-auto mb-8">
-          We work alongside underserved communities across India to expand access to
-          education, healthcare, and sustainable livelihoods.
-        </p>
-        <div className="flex flex-wrap justify-center gap-3">
-          <Button asChild variant="hero" size="lg">
-            <a href="#donate"><Heart className="fill-current" /> Donate Now</a>
-          </Button>
-          <Button asChild variant="heroOutline" size="lg">
-            <a href="#impact">See Our Impact <ArrowRight /></a>
-          </Button>
-        </div>
+      <div className="relative z-10 container py-16 md:py-20 w-full">
+            <div className="max-w-xl bg-background/95 border-l-[12px] border-primary p-8 md:p-12 lg:p-14 shadow-lg backdrop-blur-sm">
+              <span
+                className="inline-block eyebrow text-primary animate-fade-up"
+                style={{ animationDelay: "0.1s" }}
+              >
+                Since 2008 · Tamil Nadu, India
+              </span>
+              <h1
+                className="mt-5 h1-display font-bold text-foreground animate-fade-up"
+                style={{ animationDelay: "0.3s" }}
+              >
+                Live, Love, Let Live.
+              </h1>
+              <p
+                className="mt-5 body-lg text-muted-foreground max-w-lg animate-fade-up"
+                style={{ animationDelay: "0.45s" }}
+              >
+                We work alongside underserved communities across India to expand access to
+                education, healthcare, and sustainable livelihoods.
+              </p>
+              <div
+                className="mt-8 flex flex-wrap gap-4 animate-fade-up"
+                style={{ animationDelay: "0.6s" }}
+              >
+                 <Button asChild size="lg" className="min-h-11 rounded-none shadow-none uppercase tracking-wider">
+                  <a href="#donate"><Heart className="fill-current" /> Donate Now</a>
+                </Button>
+                 <Button asChild variant="outline" size="lg" className="min-h-11 rounded-none border-foreground text-foreground uppercase tracking-wider">
+                  <a href="#impact">See Our Impact <ArrowRight /></a>
+                </Button>
+              </div>
+            </div>
       </div>
     </div>
 
     {/* Credentials strip */}
     <div className="bg-foreground text-background">
-      <div className="container py-5 flex flex-wrap justify-center gap-x-10 gap-y-3 eyebrow">
-        <span>Reg. No. 872/2008</span>
-        <span>80G Tax Exempt</span>
-        <span>Audited Annually</span>
-        <span>Serving India since 2008</span>
+      <div className="container grid grid-cols-2 md:grid-cols-4">
+        {['Reg. No. 872/2008', '80G Tax Exempt', 'Audited Annually', 'Serving India since 2008'].map((item) => (
+          <span key={item} className="eyebrow py-6 px-4 text-center border-background/15 border-r last:border-r-0">{item}</span>
+        ))}
       </div>
     </div>
   </section>

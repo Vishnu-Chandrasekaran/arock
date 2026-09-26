@@ -8,7 +8,7 @@ const partnerships = [
 ];
 
 const SupportSection = () => (
-  <section id="support" className="py-24 bg-background">
+  <section id="support" className="section-pad bg-background">
     <div className="shell">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
@@ -30,7 +30,7 @@ const SupportSection = () => (
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: i * 0.15 }}
-            className="bg-card border border-border p-8 rounded-lg"
+            className="bg-card border border-border p-8 rounded-lg card-elevated"
           >
             <p.icon className="w-8 h-8 text-accent mb-4" />
             <h3 className="font-display text-lg font-semibold text-foreground mb-1">{p.type}</h3>
@@ -46,7 +46,7 @@ const SupportSection = () => (
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="bg-card border border-border p-8 rounded-lg"
+          className="bg-card border border-border p-8 rounded-lg card-elevated"
         >
           <div className="flex items-center gap-3 mb-4">
             <Building className="w-5 h-5 text-primary" />

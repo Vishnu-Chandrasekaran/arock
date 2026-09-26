@@ -27,7 +27,7 @@ const ResearchDomains = () => {
   const [expanded, setExpanded] = useState<number | null>(null);
 
   return (
-    <section id="research" className="py-24 bg-background">
+    <section id="research" className="section-pad bg-background">
       <div className="shell">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -53,7 +53,7 @@ const ResearchDomains = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: (i % 4) * 0.08 }}
-              className="bg-card border border-border rounded-lg overflow-hidden cursor-pointer group"
+              className="bg-card border border-border rounded-lg card-elevated overflow-hidden cursor-pointer group"
               onClick={() => setExpanded(expanded === i ? null : i)}
             >
               <div className="p-5 flex items-start gap-4">

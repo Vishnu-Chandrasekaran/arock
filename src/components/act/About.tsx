@@ -24,13 +24,13 @@ const PROGRAMS = [
 ];
 
 export const About = () => (
-  <section id="about" className="py-20 md:py-28">
+  <section id="about" className="py-20 md:py-28 border-b border-border">
     <div className="container">
       <div className="grid lg:grid-cols-12 gap-12 items-start">
         <div className="lg:col-span-5">
-          <span className="text-accent font-semibold tracking-widest text-xs uppercase">Who we are</span>
-          <h2 className="font-display font-bold text-4xl md:text-5xl mt-3 mb-6">
-            A grassroots charity rooted in <em className="text-primary not-italic">dignity</em>.
+           <span className="eyebrow text-primary">Who we are</span>
+           <h2 className="font-bold text-4xl md:text-5xl mt-5 mb-6">
+             A grassroots charity rooted in <span className="text-primary">dignity</span>.
           </h2>
           <div className="space-y-4 text-foreground/80 leading-relaxed">
             <p>
@@ -50,16 +50,16 @@ export const About = () => (
           </div>
         </div>
 
-        <div className="lg:col-span-7 grid sm:grid-cols-2 gap-4">
+         <div className="lg:col-span-7 grid sm:grid-cols-2 border-t border-l border-border">
           {PROGRAMS.map(({ icon: Icon, title, text }) => (
             <div
               key={title}
-              className="group p-6 rounded-2xl bg-card border border-border hover:border-accent hover:shadow-warm transition-smooth"
+               className="group p-7 bg-card border-r border-b border-border hover:border-primary transition-smooth"
             >
-              <div className="h-12 w-12 rounded-xl bg-secondary grid place-items-center text-primary group-hover:bg-accent group-hover:text-accent-foreground transition-smooth mb-4">
+               <div className="h-11 w-11 bg-secondary grid place-items-center text-primary group-hover:bg-primary group-hover:text-primary-foreground transition-smooth mb-5">
                 <Icon className="h-6 w-6" />
               </div>
-              <h3 className="font-display font-bold text-xl mb-2">{title}</h3>
+               <h3 className="font-bold text-xl mb-2">{title}</h3>
               <p className="text-sm text-muted-foreground leading-relaxed">{text}</p>
             </div>
           ))}
