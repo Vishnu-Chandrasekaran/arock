@@ -14,7 +14,7 @@ export const Team = () => (
         <div className="lg:col-span-4 flex flex-col items-center lg:items-start">
           <div className="w-full max-w-sm aspect-[3/4] overflow-hidden border-l-8 border-primary">
             <img
-              src={founderImg.url}
+              src={founderImg}
               alt="Mr. Antony A, Founder and President of Arockyaa Charitable Trust (ACT INDIA)"
               width={600}
               height={800}
