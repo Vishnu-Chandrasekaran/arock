@@ -1,7 +1,7 @@
 import liraLogo from "@/assets/act/lira-logo.png";
 
 const Footer = () => (
-  <footer className="bg-lira-dark text-primary-foreground">
+  <footer className="bg-lira-dark text-primary-foreground mt-10">
     <div className="h-1 w-full bg-lira-gold" />
     <div className="shell py-16">
       <div className="grid md:grid-cols-12 gap-12 mb-12">

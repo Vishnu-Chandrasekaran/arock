@@ -27,7 +27,7 @@ const ResearchDomains = () => {
   const [expanded, setExpanded] = useState<number | null>(null);
 
   return (
-    <section id="research" className="section-pad bg-background">
+    <section id="research" className="section-pad bg-background mt-10">
       <div className="shell">
         <motion.div
           initial={{ opacity: 0, y: 20 }}

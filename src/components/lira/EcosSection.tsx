@@ -10,7 +10,7 @@ const pillars = [
 ];
 
 const EcosSection = () => (
-  <section id="ecos" className="section-pad bg-muted">
+  <section id="ecos" className="section-pad bg-muted mt-10">
     <div className="shell">
       <motion.div
         initial={{ opacity: 0, y: 20 }}

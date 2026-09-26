@@ -18,7 +18,7 @@ const organizers = [
 ];
 
 const LatestEventSection = () => (
-  <section id="latest-event" className="section-pad bg-background">
+  <section id="latest-event" className="section-pad bg-background mt-10">
     <div className="shell">
       {/* Heading */}
       <motion.div

@@ -18,7 +18,7 @@ const values = [
 ];
 
 const AboutSection = () => (
-  <section id="about" className="section-pad bg-background">
+  <section id="about" className="section-pad bg-background mt-10">
     <div className="shell">
       {/* Who We Are */}
       <div className="grid md:grid-cols-2 gap-16 items-center mb-24">

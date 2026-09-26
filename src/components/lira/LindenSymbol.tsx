@@ -20,7 +20,7 @@ const symbols = [
 ];
 
 const LindenSymbol = () => (
-  <section className="section-pad bg-primary text-primary-foreground">
+  <section className="section-pad bg-primary text-primary-foreground mt-10 py-10">
     <div className="shell text-center">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
@@ -28,7 +28,7 @@ const LindenSymbol = () => (
         viewport={{ once: true }}
         transition={{ duration: 0.6 }}
       >
-        <TreePine className="w-10 h-10 text-accent mx-auto mb-4" />
+        <TreePine className="w-10 h-10 text-accent mx-auto mb-4 mt-5" />
         <p className="font-body text-sm tracking-[0.2em] uppercase text-accent mb-3">Strategic Symbolism</p>
         <h2 className="font-display text-3xl md:text-4xl font-bold mb-4">
           The Linden Tree

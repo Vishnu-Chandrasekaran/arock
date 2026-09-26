@@ -165,7 +165,7 @@ const teamGroups = [
 ];
 
 const TeamSection = () => (
-  <section id="team" className="section-pad bg-background">
+  <section id="team" className="section-pad bg-background mt-10">
     <div className="shell">
       <motion.div
         initial={{ opacity: 0, y: 20 }}

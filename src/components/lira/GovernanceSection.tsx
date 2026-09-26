@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { Shield, Users, BarChart3 } from "lucide-react";
 
 const GovernanceSection = () => (
-  <section id="governance" className="section-pad bg-muted">
+  <section id="governance" className="section-pad bg-muted mt-10">
     <div className="shell">
       <motion.div
         initial={{ opacity: 0, y: 20 }}

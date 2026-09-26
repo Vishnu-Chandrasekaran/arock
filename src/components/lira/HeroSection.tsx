@@ -5,7 +5,7 @@ const HeroSection = () => {
   return (
     <section aria-label="Introduction" className="relative flex min-h-[88vh] items-center overflow-hidden pb-32 md:min-h-screen md:pb-28">
       <div
-        className="absolute inset-0 bg-cover bg-center"
+        className="absolute inset-0 bg-cover bg-center mt-10"
         style={{ backgroundImage: `url(${heroImage})` }}
       />
       <div className="absolute inset-0" style={{ background: "var(--gradient-hero)" }} />

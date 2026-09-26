@@ -8,7 +8,7 @@ const partnerships = [
 ];
 
 const SupportSection = () => (
-  <section id="support" className="section-pad bg-background">
+  <section id="support" className="section-pad bg-background mt-10">
     <div className="shell">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
